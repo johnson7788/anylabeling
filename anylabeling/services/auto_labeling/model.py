@@ -110,8 +110,9 @@ class Model:
                 download_url[:20] + "..." + download_url[-20:]
             )
         logging.info(
-            f"Downloading model from {ellipsis_download_url} to {model_abs_path}"
+            f"Downloading model from {download_url} to {model_abs_path}"
         )
+        print(f"Downloading model from {download_url} to {model_abs_path}")
         try:
             # Download and show progress
             def _progress(count, block_size, total_size):
